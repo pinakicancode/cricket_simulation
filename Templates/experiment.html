@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en-us"></html>
+<html>
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>
+    Cricket Simulator
+    </title>
+    <h1 style="background-color: darkblue; color: lightcyan;";>Cricket Simulator Page</h1>
+</head>
+
+<body>
+    <p></p>
+    <!--First section has a form for selcting two teams & toss-->
+    <section style="background-color: lightcyan;">
+        <form name="TeamSelectionNToss" action="./experiment.html" method="POST">
+            <center>
+                <label style="color:blue"><h3>Teams for Match</h3></label>
+                <p></p>
+                <i>Choose the two teams and go for the toss</i>
+                <p></p>
+                <table>
+                    <tr>
+                        <td>
+                            <label for="team1">Select First Team</label>
+                            <select>
+                                <option value="ind">India</option>
+                                <option value="saf">South Africa</option>
+                                <option value="aus">Australia</option>
+                                <option value="win">West Indies</option>
+                                <option value="sri">Sri Lanka</option>
+                            </select>
+                        </td>
+                        <td>&nbsp &nbsp &nbsp</td>
+                        <td>
+                            <label for="team2">Select Second Team</label>
+                            <select>
+                                <option value="ind">India</option>
+                                <option value="saf">South Africa</option>
+                                <option value="aus">Australia</option>
+                                <option value="win">West Indies</option>
+                                <option value="sri">Sri Lanka</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Toss select</label>
+                            <input type="radio" id='heads' value='heads' name="heads_n_tails">
+                            <label for="heads">Heads</label>
+                            <input type="radio" id='tails' value='tails' name="heads_n_tails">
+                            <label for="tails">Tails</label>
+                        </td>
+                        <td>&nbsp &nbsp &nbsp</td>
+                        <td>
+                            <label>Go for Toss</label>
+                            <input type="submit" name="toss" value="Toss">
+                        </td>
+                    <tr>
+                </table>
+                <p></p>
+                <b>India</b> won the toss and chose to <b>field</b>
+                <p></p>
+            </center>
+        </form>
+        <p></p>
+    </section>
+    
+    <!--Second section has a form for updating team composition-->
+    <section style="background-color: lightcyan;">
+        <form name="InningsSimulator" action="./experiment.html" method="POST">
+            <center>
+                <label style="color: blue;"><h3>Team Composition Update</h3></label>
+                <p></p>
+                <i>Enter the number of players for each skill in your team</i>
+                <br><i>You can leave it empty if you want to go by default composition</i>
+                <table>
+                    <tr>
+                        <th>
+                            <label for="no_of_bt">Batsmen</label>
+                        </th>
+                        <th>
+                            <label for="no_of_all">All Rounder</label>
+                        </th>
+                        <th>
+                            <label for="no_of_wk">Wicket Keeper</label>
+                        </th>
+                        <th>
+                            <label for="no_of_bl">Bowler</label>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="number" min="1" max="11" name="no_of_bt">
+                        </td>
+                        <td>
+                            <input type="number" min="1" max="11" name="no_of_all">
+                        </td>
+                        <td>
+                            <input type="number" min="1" max="11" name="no_of_wk">
+                        </td>
+                        <td>
+                            <input type="number" min="1" max="11" name="no_of_bl">
+                        </td>
+                    </tr>
+                    
+                </table>
+                <p></p>
+                <input type="submit" name="submit" value="Update Composition">
+                <p></p>
+    
+                <h3 style="color: blue;">Player Selection</h3>
+                <p></p>
+                Players selected for India are:
+                <br>&nbsp;&nbsp;RSharma, VSehwag, VKohli, STendulkar, YSingh, MSDhoni, 
+                HPandya, BKumar, YChahal, MdShami, Bumrah
+                <p></p>
+                Players selected for Australia are:
+                <br>&nbsp;&nbsp;AGilchrist, MHayden, RPonting, MClarke, MHussey, 
+                ASymonds, ABitchel, SWarne, BLee, MStark
+                <p></p>
+
+            </center>
+        </form>
+    </section>
+
+    <!--
+        Third section has a form for starting the match simulation
+        Once simulation gets completed, the following will be displayed: 
+            Winning team will be displayed.
+            Scoreboard
+            Man of the Match
+    -->
+    <section style="background-color: khaki;">
+        <center>
+            <p></p>
+            <form name="MatchSim" action="./experiment.html" method="POST">
+                <label><h3 style="color: blue;">Simulate Match</h3></label>
+                <input type="submit" name="start_sim" value="Simulate Match"/>
+                <p></p>
+            </form>
+
+            <h1 style="color: blue;">Results</h1>
+            <table>
+                <tr>
+                    <th>
+                        Winner
+                    </th>
+                    <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                    <th>
+                        Man of the Match
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        India
+                    </td>
+                    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                    <td>
+                        YSingh
+                    </td>
+                </tr>
+            </table>
+
+            <h3 style="color: blue;">Scoreboard</h3>
+            Scoreboard info
+        </center>
+    </section>
+
+
+</body>
+
+</html>
